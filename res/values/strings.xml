@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Webview Test App</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome_message">WebView test app. Enter desired URL below and test loading in different WebViews.</string>
+    
+    <string name="url_hint">Enter URL</string>
+    <string name="url_default">http://www.google.com</string>
+    
+    <string name="button_webview_default">Default WebView</string>
+    <string name="button_browser">Browser</string>
+
+</resources>
