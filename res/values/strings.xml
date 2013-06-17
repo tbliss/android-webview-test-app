@@ -5,10 +5,15 @@
     <string name="action_settings">Settings</string>
     <string name="welcome_message">WebView test app. Enter desired URL below and test loading in different WebViews.</string>
     
+    <!-- Buttons -->
     <string name="url_hint">Enter URL</string>
     <string name="url_default">http://www.google.com</string>
-    
-    <string name="button_webview_default">Default WebView</string>
-    <string name="button_browser">Browser</string>
+    <string name="button_webview_default">Load in WebView</string>
+    <string name="button_browser">Load in Browser</string>
+
+    <!-- Checkboxes -->
+    <string name="checkBox_javascript_enabled">Enable JavaScript</string>
+    <string name="checkBox_dom_storage_enabled">Enable DOM Storage</string>
+    <string name="checkBox_appcache_enabled">Enable AppCache</string>
 
 </resources>

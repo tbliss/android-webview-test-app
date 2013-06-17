@@ -8,14 +8,18 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 
 public class MainActivity extends Activity {
-	private static final String LOG_TAG = "WebView Test App";
+	private static final String LOG_TAG = "MainActivity";
 
 	private Context context;
 
 	private EditText editTextUrl;
+	private CheckBox checkBoxJavascript;
+	private CheckBox checkBoxDomStorage;
+	private CheckBox checkBoxAppCache;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +27,9 @@ public class MainActivity extends Activity {
 		context = this;
 		setContentView(R.layout.activity_main);
 		editTextUrl = (EditText)findViewById(R.id.editText_url);
+		checkBoxJavascript = (CheckBox) findViewById(R.id.checkBox_javascript_enabled);
+		checkBoxDomStorage = (CheckBox) findViewById(R.id.checkBox_dom_storage_enabled);
+		checkBoxAppCache = (CheckBox) findViewById(R.id.checkBox_appcache_enabled);
 	}
 
 	@Override
@@ -40,6 +47,15 @@ public class MainActivity extends Activity {
 
 		Intent intent = new Intent(context, WebViewDefaultActivity.class);
 		intent.putExtra("url", url);
+		if (checkBoxJavascript.isChecked()) {
+			intent.putExtra("javascript", true);
+		}
+		if (checkBoxDomStorage.isChecked()) {
+			intent.putExtra("domStorage", true);
+		}
+		if (checkBoxAppCache.isChecked()) {
+			intent.putExtra("appCache", true);
+		}
 		startActivity(intent);
 	}
 
